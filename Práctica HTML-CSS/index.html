@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Proyecto de Práctica | HTML-CSS</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <!--
+                PRIMER PASO:
+        -->
+        <!-- NOMBRE DEL LOGO-->
+        <div class="logo">
+            Wald<span class="text-gradient">Pro</span> <span class="version-site">v1.0</span>
+        </div>
+
+        <!-- ICONO DE MENU Y SUS PROPIEDADES-->
+        <input type="checkbox" id="sidebar-active">
+        <label for="sidebar-active" class="open-sidebar-button">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </label>
+
+        <!--
+                SEGUNDO PASO:
+        -->
+        <!--SECCION LISTA DE NAVEGACIÓN E ICONOS CERRAR-->
+        <nav class="links-container">
+            <!--SECCION ICONO CERRAR-->
+            <label for="sidebar-active" class="close-sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </label>
+
+            <!--SECCION LISTAS DE MENU-->
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <div class="container-all">
+        <div class="box-cover">
+            <h1>CONTENIDO DE PORTADA</h1>
+        </div>
+        <!----------------------------------------------->
+        <!--CONTENIDO PRINCIPAL     CONTENIDO PRINCIPAL-->
+        <!----------------------------------------------->
+        <div class="box-services">
+            <div class="dualbox-1">
+                <div class="box-1">
+                    <div class="header-title"><!--CONTENEDOR 1-->
+                        <h3>Invitacion digital</h3>
+                    </div>
+                    <div class="container-text">
+                        <p>Nosotros nos encargamos de crear tu invitacion digital, video o imagen para compartir por redes sociales.</p>
+                    </div>                    
+                    <div class="more">
+                        <button>
+                            <a href="#"><span class="saber-mas">Saber-mas...</span></a>
+                        </button>
+                    </div>
+                </div>
+                <div class="box-1">
+                    <div class="header-title"><!--CONTENEDOR 2-->
+                        <h3>Diseño 3d Casa</h3>
+                    </div>
+                    <div class="container-text">
+                        <p>Nos especialisamos a crear casa modelo 3D para que puedas visualizar tu proyecto de manera mas facil.</p>
+                    </div>
+                    <div class="more">
+                        <button>
+                            <a href="#"><span class="saber-mas">Saber-mas...</span></a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="dualbox-1">
+                <div class="dualbox-1">
+                    <div class="box-1">
+                        <div class="header-title"><!--CONTENEDOR 1-->
+                            <h3>Edicion de videos</h3>
+                        </div>
+                        <div class="container-text">
+                            <p>Ofrecemos nuestros servicios para la edicion de video audiovisual de manera profecional.</p>
+                        </div>                    
+                        <div class="more">
+                        <button>
+                            <a href="#"><span class="saber-mas">Saber-mas...</span></a>
+                        </button>
+                        </div>
+                    </div>
+                    <div class="box-1">
+                        <div class="header-title"><!--CONTENEDOR 2-->
+                            <h3>Edicion de audio</h3>
+                        </div>
+                        <div class="container-text">
+                            <p>Editar textos aquí...</p>
+                        </div>
+                        <div class="more">
+                        <button>
+                            <a href="#"><span class="saber-mas">Saber-mas...</span></a>
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----------------------------------------------->
+    <!--CONTENIDO PRINCIPAL     CONTENIDO PRINCIPAL-->
+    <!----------------------------------------------->
+    <footer>
+        <!--seccion top-->
+        <div class="meta-footer">
+            <div class="footer-box-1">
+                <a href="#"><span class="title-footer">HERRAMIENTAS</span></a>
+                <a href="#"><span class="text-footer">Visual Studio Code</span></a>
+                <a href="#"><span class="text-footer">Filmora Pro</span></a>
+                <a href="#"><span class="text-footer">PhotoScape pro</span></a>
+            </div>
+            <div class="footer-box-2">
+                <a href="#"><span class="title-footer-2">REDES</span></a>
+                <a href="#"><span class="text-footer-2">Facebook</span></a>
+                <a href="#"><span class="text-footer-2">Instagram</span></a>
+                <a href="#"><span class="text-footer-2">Whatsapp</span></a>
+            </div>
+        </div>
+
+        <!--seccion-bottom-->
+        <div class="legal">
+            <div class="copyright">
+                <h4>© 2025 WALDPRO STUDIO CREATIVE <span class="version-site-footer">v1.0</span> </h4>
+            </div>
+            <div class="terminos">
+                <span class="text-1">TÉRMINOS</span>
+                <span class="text-2">PRIVACIDAD</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
