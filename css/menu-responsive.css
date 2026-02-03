@@ -1,0 +1,227 @@
+
+/* CSS PERSONALIZADO - FUNDAMENTOS AVANZADOS */
+
+/* OCULTAR BARRA DE SCROLL GLOBALMENTE */
+html {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+}
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+/* 1. EL TRUCO DEL CHECKBOX (Oculto) */
+#menu-toggle {
+    display: none;
+}
+/* 2. OVERLAY (Capa de oscurecimiento) */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+    z-index: 30;
+}
+/* 3. MENÚ LATERAL (70% ancho, 100% alto) */
+.nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #111827; /* Gray 900 */
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alineado a la izquierda */
+    justify-content: top;
+    padding: 18% 0 0 10%; /* Espaciado interno */
+    z-index: 40;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.3);
+}
+/* ESTADOS ACTIVOS */
+#menu-toggle:checked ~ .nav-links {
+    right: 0;
+}
+#menu-toggle:checked ~ .menu-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+.cover{
+    width: 100%;
+    height: auto;
+}
+
+.step-card{
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    padding:2vh;
+    margin: 33px 0 0 0;
+    text-align: left;
+    border-left: 4px solid #f761d6;
+    background-color: #450137;
+    color: grey;
+    box-shadow: 18px 13px 22px #111827;
+}
+
+.container-box{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-top: 33px;
+}
+.box{
+    width: 100%;
+    height: 30vh;
+    padding: 1px;
+    margin-top: 18px;
+    border: 2px solid #e952d0;
+    border-radius: 3.5%;
+    background: #c7c8c9;
+    display: flex;
+    display:flex;
+    justify-content: space-between;
+}
+.box-images{
+    width: 49.5%;
+    height: 100%;
+    position: relative;
+}
+.section-img{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    border-radius: 4%;
+    border: 3px solid violet;
+    box-shadow: 10px 28px 28px -10px #111827;
+}
+img{
+    border-radius: 4%;
+}
+.title-works{
+    width: 100%;
+    height: 28px;
+    background:#640265;
+    color: pink;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 0 0 8px 8px;
+}
+
+.more-content{
+    width: 100%;
+    height: 40px;
+    margin-top: 22px;
+    display: grid;
+    place-content: center;
+}
+button{
+    width: 122px;
+    height: auto;
+    border: 1px solid rgb(220, 13, 13);
+    border-radius: 8px;
+    background: linear-gradient(#f03acb, #f782ce);
+    color: rgb(66, 1, 45);
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+footer{
+    width: 100%;
+    height: 18vh;
+    padding: 3%;
+    background: #111827;
+}
+.credit-footer{
+    width: 100%;
+    height: auto;
+    margin: 3%;
+    color: antiquewhite;
+    text-align: center;
+}
+.developer{
+    color: cyan;
+}
+.copy, p{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: rgb(131, 129, 129);
+}
+
+
+
+
+
+/* 4. SOLUCIÓN AL SALTO DE SCROLL (MÓVIL) */
+@media (max-width: 767px) {
+    /* Eliminamos 'position: fixed' para evitar que la página salte al inicio */
+    body:has(#menu-toggle:checked) {
+        overflow: hidden;
+        /* Eliminamos position: fixed y height: 100vh que causaban el reinicio del scroll */
+    }
+}
+/* 5. ANIMACIÓN DE HAMBURGUESA A "X" */
+.hamburger {
+    position: relative;
+    z-index: 50;
+    width: 30px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #1f2937;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+    transform-origin: left center;
+}
+#menu-toggle:checked ~ label .hamburger span {
+    background-color: #ffffff;
+}
+#menu-toggle:checked ~ label .hamburger span:nth-child(1) {
+    transform: rotate(45deg);
+    margin-left: 5px;
+}
+#menu-toggle:checked ~ label .hamburger span:nth-child(2) {
+    width: 0%;
+    opacity: 0;
+}
+#menu-toggle:checked ~ label .hamburger span:nth-child(3) {
+    transform: rotate(-45deg);
+    margin-left: 5px;
+}
+/* 6. ADAPTACIÓN PARA ESCRITORIO */
+@media (min-width: 768px) {
+    .nav-links {
+        position: static;
+        width: auto;
+        height: auto;
+        background: transparent;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 0;
+        transition: none;
+        box-shadow: none;
+    }
+    .hamburger-container, .menu-overlay {
+        display: none;
+    }
+    
+    body {
+        overflow: auto;
+    }
+}
