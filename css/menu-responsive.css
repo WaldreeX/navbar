@@ -1,4 +1,8 @@
-
+:root {
+    --primary-color: #333;
+    --accent-color: #ff3e6c;
+    --bg-circle: #f0f0f0;
+}
 /* CSS PERSONALIZADO - FUNDAMENTOS AVANZADOS */
 
 /* OCULTAR BARRA DE SCROLL GLOBALMENTE */
@@ -51,29 +55,146 @@ html::-webkit-scrollbar {
     opacity: 1;
     visibility: visible;
 }
-.cover{
-    width: 100%;
-    height: auto;
-}
 
 .step-card{
     width: 100%;
     height: auto;
     border-radius: 6px;
-    padding:2vh;
-    margin: 33px 0 0 0;
+    padding:0;
+    margin-top: -33px;
     text-align: left;
-    border-left: 4px solid #f761d6;
-    background-color: #450137;
-    color: grey;
-    box-shadow: 18px 13px 22px #111827;
+    color: rgb(49, 49, 49);
+    line-height: 4px;
 }
+
+
+
+/**
+    CARRUSEL CATEGORY   CARRUSEL CATEGORY
+**/
+
+
+/* Contenedor principal solicitado: category */
+.category {
+    width: 100%;
+    width: 100%;
+    padding: 20px 0 0 0;
+    position: relative;
+    overflow: hidden;
+    margin-top: 22px;
+}
+/* El track ahora usa scroll nativo con snapping para fluidez total en móviles */
+.category-track {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Permite el deslizamiento nativo */
+    scroll-snap-type: x mandatory; /* Hace que los elementos se "ajusten" al deslizar */
+    scroll-behavior: smooth;
+    padding: 10px 20px;
+    -webkit-overflow-scrolling: touch; /* Mejora el scroll en iOS */
+}
+/* Ocultar la barra de scroll para un look más limpio */
+.category-track::-webkit-scrollbar {
+    display: none;
+}
+.category-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/* Estilo de cada item individual */
+.category-item {
+    flex: 0 0 90px; /* Ancho fijo para asegurar que quepan varios y se desborden */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: center; /* Alineación del ajuste */
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: transform 0.2s ease;
+}
+/* Representación circular */
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--bg-circle);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.category-item:active {
+    transform: scale(0.95);
+}
+/* Efecto visual al interactuar */
+.category-item:hover .circle {
+    border-color: var(--accent-color);
+}
+.category-item span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+/* Iconos para Pag-1 y Pag-2 */
+.nav-icon {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+/* Indicador visual para escritorio (opcional) */
+.desktop-nav {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 5;
+}
+@media (min-width: 769px) {
+    .category {
+        max-width: 800px;
+    }
+    .category-item {
+        flex: 0 0 110px;
+    }
+    .circle {
+        width: 90px;
+        height: 90px;
+    }
+}
+
+/**
+    FIN CARRUSEL CATEGORY
+**/
+
+/*
+    BUSCADOR    BUSCADOR    BUSCADOR
+*/
+
+
+
+
+/*
+    FIN BUSCADOR    FIN BUSCADOR    FIN BUSCADOR
+*/
 
 .container-box{
     width: 100%;
     height: auto;
     padding: 0;
-    margin-top: 33px;
+    margin-top: 0;/*33px*/
 }
 .box{
     width: 100%;
@@ -82,7 +203,7 @@ html::-webkit-scrollbar {
     margin-top: 18px;
     border: 2px solid #e952d0;
     border-radius: 3.5%;
-    background: #c7c8c9;
+    background: #f7d1f5;
     display: flex;
     display:flex;
     justify-content: space-between;
@@ -99,7 +220,6 @@ html::-webkit-scrollbar {
     margin: 0;
     border-radius: 4%;
     border: 3px solid violet;
-    box-shadow: 10px 28px 28px -10px #111827;
 }
 img{
     border-radius: 4%;
@@ -107,7 +227,7 @@ img{
 .title-works{
     width: 100%;
     height: 28px;
-    background:#640265;
+    background:#eb3bb3;
     color: pink;
     position: absolute;
     bottom: 0;
@@ -116,24 +236,45 @@ img{
     border-radius: 0 0 8px 8px;
 }
 
-.more-content{
-    width: 100%;
-    height: 40px;
+/*
+    BOTON   BOTON
+*/
+
+.button-next{    
+    font-family: 'Quicksand', sans-serif;
+    background: #fff5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
     margin-top: 22px;
-    display: grid;
-    place-content: center;
 }
-button{
-    width: 122px;
-    height: auto;
-    border: 1px solid rgb(220, 13, 13);
-    border-radius: 8px;
-    background: linear-gradient(#f03acb, #f782ce);
-    color: rgb(66, 1, 45);
-    letter-spacing: 1px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 700;
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.2);
 }
+.gradient-button {
+    background: linear-gradient(135deg, #df2993 0%, #fecfef 50%, #fbc2eb 100%);
+    background-size: 200% auto;
+    transition: 0.4s;
+    box-shadow: 0 4px 15px rgba(251, 194, 235, 0.4);
+    color:rgb(207, 10, 217);
+    font-weight: 300;
+}
+.gradient-button:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(251, 194, 235, 0.6);
+}
+.elegant-title {
+    font-family: 'Playfair Display', serif;
+}
+
+/*
+        FOOTER  FOOTER  FOOTER
+*/
 
 footer{
     width: 100%;
