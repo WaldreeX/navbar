@@ -10,33 +10,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        .search-results-container::-webkit-scrollbar {
-            width: 6px;
-        }
-        .search-results-container::-webkit-scrollbar-thumb {
-            background-color: #e2e8f0;
-            border-radius: 10px;
-        }
-        .search-focus:focus-within {
-            ring: 2px;
-            ring-color: #3b82f6;
-            border-color: #3b82f6;
-        }
-        #filter-dropdown.show {
-            display: block;
-            animation: fadeIn 0.2s ease-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .category-item.active {
-            background-color: #eff6ff;
-            color: #2563eb;
-            font-weight: 600;
-        }
-    </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans">
 
@@ -66,7 +39,7 @@
             <!-- NAVEGACIÓN -->
             <ul class="nav-links space-y-8 md:space-y-0 md:space-x-8 text-2xl md:text-base font-semibold text-white md:text-slate-600">
                 <li><a href="#" class="letter-menu">Inicio</a></li>
-                <li><a href="#" class="letter-menu">Sobre mi</a></li>
+                <li><a href="#" class="letter-menu">Mis ideas</a></li>
                 <li><a href="#" class="letter-menu">Proyectos</a></li>
                 <li><a href="#" class="letter-menu">Contacto</a></li>
             </ul>
@@ -74,11 +47,11 @@
     </header>
 
     <!-- CONTENIDO -->
-    <main class="max-w-4xl mx-auto px-6 py-12">
+    <main class="px-0 py-12">
         <div class="space">
-            <div class="step-card">
-                <h2 class="text-xl font-bold mb-2">Manualidades </h2>
-                <p class="text-slate-700 text-left mb-1">Explore todas la colecciones</p>
+            <div class="step-card max-w-4xl mx-auto px-4 py-12">
+                <h2 class="text-xl font-bold mb-2"><code class="motivo">Para mi emprendimiento ❤️</code></h2>
+                <p class="text-slate-700 text-left mb-1">Encomienda a Jehová tus obras, y tus pensamientos serán afirmados! <br><code class="cita-biblica">Proverbios 16:3</code></p>
             </div>
         </div>
 
@@ -139,11 +112,11 @@
     <!--        FIN CONTENIDO CARRUSEL CATEGORY     -->
 
         
-    <div class="bg-gray-50 p-10 flex justify-center">
+    <div class="searcher-container bg-gray-50 p-10 flex justify-center">
 
         <div class="max-w-md w-full relative" id="search-component">
 
-            <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden border border-gray-200 transition-all duration-300 search-focus">
+            <div class="search-box relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden border transition-all duration-300 search-focus">
                 <div class="grid place-items-center h-full w-12 text-gray-400">
                     <i data-lucide="search" class="w-5 h-5"></i>
                 </div>
@@ -152,7 +125,7 @@
                     class="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
                     type="text"
                     id="search-input"
-                    placeholder="Busca una remera, servicio..." 
+                    placeholder="Buscar un contenido" 
                     autocomplete="off"
                 />
 

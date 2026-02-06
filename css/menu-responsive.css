@@ -60,11 +60,22 @@ html::-webkit-scrollbar {
     width: 100%;
     height: auto;
     border-radius: 6px;
-    padding:0;
+    padding:18px;
     margin-top: -33px;
     text-align: left;
     color: rgb(49, 49, 49);
-    line-height: 4px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+}
+.motivo{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.2px;
+}
+.cita-biblica{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 
@@ -78,7 +89,7 @@ html::-webkit-scrollbar {
 .category {
     width: 100%;
     width: 100%;
-    padding: 20px 0 0 0;
+    padding: 20px 0 0 10px;
     position: relative;
     overflow: hidden;
     margin-top: 22px;
@@ -86,11 +97,11 @@ html::-webkit-scrollbar {
 /* El track ahora usa scroll nativo con snapping para fluidez total en móviles */
 .category-track {
     display: flex;
-    gap: 20px;
+    gap: 10px;
     overflow-x: auto; /* Permite el deslizamiento nativo */
     scroll-snap-type: x mandatory; /* Hace que los elementos se "ajusten" al deslizar */
     scroll-behavior: smooth;
-    padding: 10px 20px;
+    padding: auto 0;
     -webkit-overflow-scrolling: touch; /* Mejora el scroll en iOS */
 }
 /* Ocultar la barra de scroll para un look más limpio */
@@ -162,18 +173,6 @@ html::-webkit-scrollbar {
     pointer-events: none;
     z-index: 5;
 }
-@media (min-width: 769px) {
-    .category {
-        max-width: 800px;
-    }
-    .category-item {
-        flex: 0 0 110px;
-    }
-    .circle {
-        width: 90px;
-        height: 90px;
-    }
-}
 
 /**
     FIN CARRUSEL CATEGORY
@@ -183,6 +182,39 @@ html::-webkit-scrollbar {
     BUSCADOR    BUSCADOR    BUSCADOR
 */
 
+.searcher-container{
+    padding: 10% 0px;
+}
+.search-box{
+    border-radius: 22px;
+    border: 1px solid grey;
+}
+.search-results-container::-webkit-scrollbar {
+    width: 6px;
+
+}
+.search-results-container::-webkit-scrollbar-thumb {
+    background-color: #e2e8f0;
+    border-radius: 10px;
+}
+.search-focus:focus-within {
+    ring: 2px;
+    ring-color: #3b82f6;
+    border-color: #3b82f6;
+}
+#filter-dropdown.show {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.category-item.active {
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-weight: 600;
+}
 
 
 
@@ -193,7 +225,7 @@ html::-webkit-scrollbar {
 .container-box{
     width: 100%;
     height: auto;
-    padding: 0;
+    padding: 0 5%;
     margin-top: 0;/*33px*/
 }
 .box{
@@ -203,7 +235,7 @@ html::-webkit-scrollbar {
     margin-top: 18px;
     border: 2px solid #e952d0;
     border-radius: 3.5%;
-    background: #f7d1f5;
+    background: #dddddd;
     display: flex;
     display:flex;
     justify-content: space-between;
@@ -219,7 +251,6 @@ html::-webkit-scrollbar {
     padding: 0;
     margin: 0;
     border-radius: 4%;
-    border: 3px solid violet;
 }
 img{
     border-radius: 4%;
