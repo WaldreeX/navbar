@@ -185,7 +185,8 @@ html::-webkit-scrollbar {
 .searcher-container{
     width: 100%;
     height: auto;
-    padding: 5%;
+    padding: 7%;
+    margin: 18px 0 22px 0;
 }
 .search-box{
     border-radius: 22px;
@@ -226,7 +227,7 @@ html::-webkit-scrollbar {
 .container-box{
     width: 100%;
     height: auto;
-    padding: 0 5%;
+    padding: 0 7%;
     margin-top: 0;/*33px*/
 }
 .box{
@@ -274,7 +275,6 @@ img{
 
 .button-next{    
     font-family: 'Quicksand', sans-serif;
-    background: #fff5f7;
     display: flex;
     justify-content: center;
     align-items: center;
