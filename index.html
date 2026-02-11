@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mastering Responsive Menus - Flexbox & Mobile First</title>
+    <title>Inicio | Página Principal</title>
     <link rel="stylesheet" href="css/menu-responsive.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="js/carruse-category.js"></script>
@@ -49,9 +49,8 @@
     <!-- CONTENIDO -->
     <main class="px-0 py-12">
         <div class="space">
-            <div class="step-card max-w-4xl mx-auto px-4 py-12">
-                <h2 class="text-xl font-bold mb-2"><code class="motivo">Para mi emprendimiento ❤️</code></h2>
-                <p class="text-slate-700 text-left mb-1">Encomienda a Jehová tus obras, y tus pensamientos serán afirmados! <br><code class="cita-biblica">Proverbios 16:3</code></p>
+            <div class="step-card max-w-4xl mx-auto px-1">
+                <img src="img/cover.jpg" alt="cover">
             </div>
         </div>
 
@@ -62,7 +61,7 @@
                 <!-- Mujeres -->
                 <div class="category-item">
                     <div class="circle">
-                        <a href="sub-page/search.html">
+                        <a href="sub-page/cajitas/cajitas.html">
                             <img src="img/carrusel-category/carruse-category-cajita.jpg" alt="Cajitas">
                         </a>
                     </div>
@@ -72,7 +71,9 @@
                 <!-- Hombres -->
                 <div class="category-item">
                     <div class="circle">
-                        <img src="img/carrusel-category/category-carrusel-flores.jpg" alt="Flores">
+                        <a href="sub-page/flores/flores.html">
+                            <img src="img/carrusel-category/category-carrusel-flores.jpg" alt="Flores">
+                        </a>
                     </div>
                     <span>Flores</span>
                 </div>
@@ -80,23 +81,29 @@
                 <!-- Niños -->
                 <div class="category-item">
                     <div class="circle">
-                        <img src="img/carrusel-category/carruse-category-cuadro.jpg" alt="Cuadross">
+                        <a href="sub-page/cuadros/cuadros.html">
+                            <img src="img/carrusel-category/carruse-category-cuadro.jpg" alt="Cuadross">
+                        </a>
                     </div>
                     <span>Cuadros</span>
                 </div>
 
                 <!-- Pag-1 (Botón funcional de scroll) -->
-                <div class="category-item" onclick="scrollToEnd('left')">
+                <div class="category-item">
                     <div class="circle">
-                        <img src="img/carrusel-category/carruse-category-centro-de-mesa.jpg" alt="Centro de mesa">
+                        <a href="sub-page/centro-de-mesa/centro-de-mesa.html">
+                            <img src="img/carrusel-category/carruse-category-centro-de-mesa.jpg" alt="Centro de mesa">
+                        </a>
                     </div>
                     <span>Centro de mesa</span>
                 </div>
 
                 <!-- Pag-2 (Botón funcional de scroll) -->
-                <div class="category-item" onclick="scrollToEnd('right')">
+                <div class="category-item">
                     <div class="circle">
-                        <img src="img/carrusel-category/carruse-category-15.jpg" alt="Centro de mesa 15">
+                        <a href="sub-page/centro-de-mesa-15/centro-de-mesa-15.html">
+                            <img src="img/carrusel-category/carruse-category-15.jpg" alt="Centro de mesa 15">
+                        </a>
                     </div>
                     <span>Centro de mesa para 15</span>
                 </div>
@@ -104,7 +111,9 @@
                 <!-- Más Categorías para probar el scroll -->
                 <div class="category-item">
                     <div class="circle">
-                        <img src="icon/icon-day.jpeg" alt="Otros">
+                        <a href="sub-page/otros/otros.html">
+                            <img src="icon/icon-day.jpeg" alt="Otros">
+                        </a>
                     </div>
                     <span>Otros</span>
                 </div>

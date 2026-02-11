@@ -55,18 +55,77 @@ html::-webkit-scrollbar {
     opacity: 1;
     visibility: visible;
 }
-
-.step-card{
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    padding:;
-    margin: -38px 0 50px 0;
-    text-align: left;
-    color: rgb(49, 49, 49);
-    line-height: 18px;
-    letter-spacing: 0.5px;
+.inicio{
+    width: 27.5%;
+    height: 100%;
+    padding: 0;
+    margin: -1;
 }
+
+.button-back{
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button-left{
+    margin: -12px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: rgb(237, 235, 235);
+}
+.inicio:hover{
+    background: rgb(237, 235, 235);
+}
+
+
+/*
+    BUSCADOR    BUSCADOR    BUSCADOR
+*/
+
+.searcher-container{
+    width: 90%;
+    height: auto;
+    padding-right: 6px;
+    margin: 0;
+    background:#ffffff;
+}
+.search-box{
+    border-radius: 22px;
+    height: 39px;
+}
+.search-results-container::-webkit-scrollbar {
+    width: 6px;
+
+}
+.search-results-container::-webkit-scrollbar-thumb {
+    background-color: #e2e8f0;
+    border-radius: 22px;
+}
+.search-focus:focus-within {
+    ring: 2px;
+    ring-color: #3b82f6;
+    border-color: #dc4bbf;
+}
+#filter-dropdown.show {
+    display: block;
+    animation: fadeIn 0.2s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.category-item.active {
+    background-color: #eff6ff;
+    color: #dc4bbf;
+    font-weight: 600;
+}
+
+
+
+/*
+    FIN BUSCADOR    FIN BUSCADOR    FIN BUSCADOR
+*/
 
 
 
@@ -167,52 +226,6 @@ html::-webkit-scrollbar {
 /**
     FIN CARRUSEL CATEGORY
 **/
-
-/*
-    BUSCADOR    BUSCADOR    BUSCADOR
-*/
-
-.searcher-container{
-    width: 100%;
-    height: auto;
-    padding: 7%;
-    margin: 18px 0 22px 0;
-}
-.search-box{
-    border-radius: 22px;
-}
-.search-results-container::-webkit-scrollbar {
-    width: 6px;
-
-}
-.search-results-container::-webkit-scrollbar-thumb {
-    background-color: #e2e8f0;
-    border-radius: 22px;
-}
-.search-focus:focus-within {
-    ring: 2px;
-    ring-color: #3b82f6;
-    border-color: #dc4bbf;
-}
-#filter-dropdown.show {
-    display: block;
-    animation: fadeIn 0.2s ease-out;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.category-item.active {
-    background-color: #eff6ff;
-    color: #dc4bbf;
-    font-weight: 600;
-}
-
-
-
-/*
-    FIN BUSCADOR    FIN BUSCADOR    FIN BUSCADOR
-*/
 
 .container-box{
     width: 100%;
