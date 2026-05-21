@@ -27,10 +27,10 @@ html::-webkit-scrollbar {
     display: flex;
 }
 .perfil{
-    width: 20%;
+    width: 18%;
     height: 100%;
     display: flex;
-    border: 1px solid #ee54eb;
+    border: 1px solid red;
     background-image: url("../icon/logo.png");
     background-size: cover;
     background-position: center;
