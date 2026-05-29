@@ -1,0 +1,246 @@
+/* ===== RESET ESTILOS PREDETERMINADOS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* ===== HEADER/NAVBAR ===== */
+.navbar {
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Logo */
+.navbar-logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-logo a:hover {
+    color: #00bcd4;
+}
+
+/* Menú de navegación */
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.navbar-link {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+}
+
+.navbar-link:hover {
+    color: #00bcd4;
+}
+
+/* Botón hamburguesa - OCULTO EN DESKTOP */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 101;
+}
+
+.hamburger-line-1{
+    width: 32px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+.hamburger-line-2{
+    width: 32px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+
+}
+.hamburger-line-3 {
+    width: 32px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Animación del hamburguesa cuando está activo */
+.hamburger.active .hamburger-line-1:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active .hamburger-line-2:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .hamburger-line-3:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+/* Overlay/Backdrop */
+.navbar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 99;
+}
+
+.navbar-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== RESPONSIVE - TABLETS Y DISPOSITIVOS PEQUEÑOS ===== */
+@media screen and (max-width: 768px) {
+    .navbar-container {
+        padding: 0 1.5rem;
+    }
+
+    /* Mostrar hamburguesa en móviles */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Menú móvil - Desliza desde la derecha */
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        max-width: 280px;
+        height: 100vh;
+        background-color: #1a1a1a;
+        padding: 5rem 2rem 2rem;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        z-index: 100;
+        overflow-y: auto;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Menú activo */
+    .navbar-menu.active {
+        transform: translateX(0);
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar-item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-item:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-link {
+        display: block;
+        padding: 1.2rem 0;
+        font-size: 1.1rem;
+    }
+
+    .navbar-logo a {
+        font-size: 1.3rem;
+    }
+}
+
+/* ===== RESPONSIVE - MÓVILES PEQUEÑOS ===== */
+@media screen and (max-width: 480px) {
+    .navbar-container {
+        padding: 0 1rem;
+    }
+
+    .navbar-menu {
+        width: 75%;
+        padding: 4rem 1.5rem 2rem;
+    }
+
+    .navbar-logo a {
+        font-size: 1.2rem;
+    }
+
+    .hamburger-line {
+        width: 22px;
+        height: 2.5px;
+    }
+}
+
+/* ===== CONTENIDO PRINCIPAL (EJEMPLO) ===== */
+main {
+    padding: 2rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== PREVENIR SCROLL CUANDO EL MENÚ ESTÁ ABIERTO ===== */
+body.menu-open {
+    overflow: hidden;
+}
